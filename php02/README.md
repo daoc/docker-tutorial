@@ -12,4 +12,6 @@ En este caso, la imagen php:7.2-apache, que ya descargamos en el php01 nos puede
 
 Con esta instrucción arrancaremos un container a partir de la imagen php:7.2-apache; este container se ejecutará en el background (-d); se mapeará el puerto 8888 en el HOST con el 80 en el container (-p 8888:80) y con la opción -v vincularemos el directorio /home/user/mivol del HOST, con el directorio /var/www/html del container.
 
+[Demo](https://youtu.be/-WeqPR-0UH0)
+
 Atención: en el ejercicio php01 se copiaba el contenido del directorio local al container; ahora no se copia nada, se crea un link dinámico. Tanto el HOST como el container usarán el mismo directorio que ha sido vinculado: los cambios hechos por el uno los ve inmediatamente el otro.
