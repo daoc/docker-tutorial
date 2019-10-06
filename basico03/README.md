@@ -17,8 +17,8 @@ En este ejercicio vamos a crear tres containers que van a interactuar:
    
 - Finalmente, nuestro tercer servicio será el frontend web (también Java SpringBoot), que se puede descargar con: `docker pull daoc/web-frontend:latest`. El código del servidor y el Dockerfile están en el subdirectorio [web-frontend](./web-frontend). Este frontend se conecta con el backend rest para compartir información con la base de datos:
 
-   frontend <--> backend <--> database
+   > frontend <--> backend <--> database
    
    Muy parecido al servicio anterior, lo arrancamos así: `docker run -d -p 80:80 --link rest-backend:backend --name web-frontend daoc/web-frontend`. Desde el HOST nos conectaremos utilizando el browser directamente con este servidor con: `http://localhost` y no resta más que manipular el sistema.
    
-[Demo]()
+   [Demo]()
