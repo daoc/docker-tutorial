@@ -11,4 +11,8 @@ En este ejercicio vamos a crear tres containers que van a interactuar:
 
 - Luego, tenemos un servicio rest Java (SpringBoot), que proporciona una interfaz genérica para el frontend y que se encarga de trabajar con la base de datos del servidor previo. Pueden descargar este servidor con: `docker pull daoc/rest-backend:latest`. El código del servidor y el Dockerfile están en el subdirectorio [rest-backend](./rest-backend).
 
-   Ahora bien, este servicio rest tiene el nombre del servidor de base de datos codificado en duro como *h2-bdd*
+   Ahora bien, en el código fuente de este servicio rest, el nombre del servidor de base de datos H2 está codificado en duro como *h2-bdd*. Dando que en el item anterior arrancamos el servidor H2 con el nombre *h2-database*, debemos utilizar otra nueva opción para poder ligarlos: *--link*.
+   
+   Entonces, para ejecutar este container vamos a utilizar: `docker run -d -p 8080:80 --link h2-database:h2-bdd --name rest-backend daoc/rest-backend`y justamente la opción `--link h2-database:h2-bdd` lo que hace es registrar en este nuevo container un alias para el container h2-database, el cual será *h2-bdd*. De esta manera se establecerá la conexión sin necesidad de cambiar nada.
+   
+- 
