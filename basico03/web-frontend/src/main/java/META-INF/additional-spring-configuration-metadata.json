@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "usrval.restbackend.server",
+    "type": "java.lang.String",
+    "description": "A description for 'usrval.restbackend.server'"
+  },
+  {
+    "name": "usrval.restbackend.port",
+    "type": "java.lang.String",
+    "description": "A description for 'usrval.restbackend.port'"
+  },
+  {
+    "name": "usrval.restbackend.path",
+    "type": "java.lang.String",
+    "description": "A description for 'usrval.restbackend.path'"
+  }
+]}

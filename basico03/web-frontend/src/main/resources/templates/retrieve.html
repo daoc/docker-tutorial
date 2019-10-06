@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Crud Estudiantes</title>
+	</head>
+	<body>
+		<h1>Estudiantes existentes</h1>
+		<a href="/create">Create</a>
+		<table border="1">
+			<tr>
+				<th>Id</th>
+				<th>Cédula</th>
+				<th>Nombre</th>
+			</tr>
+			<tr th:each="est : ${estudiantes}">
+				<td th:text="${est.id}"></td>
+				<td th:text="${est.cedula}"></td>
+				<td th:text="${est.nombre}"></td>				
+				<td>
+					<a th:href="@{/update/{id}(id=${est.id})}">Update</a>
+					<a th:href="@{/delete/{id}(id=${est.id})}">Delete</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

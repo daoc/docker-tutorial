@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Delete Estudiante</title>
+	</head>
+	<body>
+		<h1>Delete Estudiante</h1>
+		
+		<form th:action="@{/doDelete}" th:object="${estudiante}" method="post">
+			<p>Id: <input type="text" readonly="readonly" th:field="*{id}"/></p>
+			<p>Cédula: <input type="text" readonly="readonly" th:field="*{cedula}"/></p>
+			<p>Nombre: <input type="text" readonly="readonly" th:field="*{nombre}"/></p>
+			<p><input type="submit" value="Delete"/></p>
+		</form>
+	</body>
+</html>
