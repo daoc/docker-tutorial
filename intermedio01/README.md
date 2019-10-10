@@ -28,5 +28,6 @@ services:
     networks:
       - tutorialnet
 ```
-La sección *networks* crea la red *tutorialnet*. La secciòn *services* crea los 3 servicios: *h2-bdd*, *backend* y *frontend*. En cada servicio, la sección *image* indica la imagen de base para crear el container, *ports* expone los puertos necesarios al HOST, *volumes* liga los directorios del HOST y container y, en todos los casos, *networks* une el container a la red creada en la primera sección.
+La sección *networks* crea la red *tutorialnet*. La secciòn *services* crea los 3 servicios: *h2-bdd*, *backend* y *frontend*. En cada servicio, la sección *image* indica la imagen de base para crear el container, *ports* expone los puertos necesarios al HOST, *volumes* liga los directorios del HOST y container y, en todos los casos, *networks* une el container a la red creada en la primera sección. 
+> Al estar todos los containers en la misma red, se activa la resolución de nombres para ellos y pueden conectarse por el nombre del servicio.
 
