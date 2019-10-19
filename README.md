@@ -19,4 +19,8 @@ Para sistemas MacOS también hay las mismas dos alternativas. [Docker Desktop](h
 
 [Demo](https://youtu.be/CujFPAYeSQ0)
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=CujFPAYeSQ0
+" target="_blank"><img src="http://img.youtube.com/vi/CujFPAYeSQ0/0.jpg" 
+alt="Demo docker run" width="240" height="180" border="10" /></a>
+
 ## [Siguiente](https://github.com/daoc/docker-tutorial/tree/master/php01)
