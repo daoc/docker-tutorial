@@ -21,6 +21,6 @@ En este ejercicio vamos a crear tres containers que van a interactuar:
    
    Muy parecido al servicio anterior, lo arrancamos así: `docker run -d -p 80:80 --link rest-backend:backend --name web-frontend daoc/web-frontend`. Desde el HOST nos conectaremos utilizando el browser directamente con este servidor con: `http://localhost` y no resta más que manipular el sistema.
    
-   [Demo](https://youtu.be/MkGYQey9eIw)
+   [Demo servicios interconectados<br/><img src="https://img.youtube.com/vi/MkGYQey9eIw/maxresdefault.jpg" width="20%">](https://youtu.be/MkGYQey9eIw)
 
 ## [Siguiente](../intermedio01)
