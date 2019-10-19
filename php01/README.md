@@ -41,6 +41,6 @@ Luego de ejecutar el build, que podría demorar un poco, tenemos la nueva imagen
 
 Si vamos a un navegador y ponemos en la línea de dirección http://localhost (no hace falta poner el puerto, recuerden que 80 es el puerto http por defecto) veremos la respuesta de la página index.php y podremos jugar un poco con ella.
 
-[Demo crear imagen personalizada<br/><img src="https://img.youtube.com/vi/RYz5ar17FR0/maxresdefault.jpg" width="20%">]](https://youtu.be/RYz5ar17FR0)
+[Demo crear imagen personalizada<br/><img src="https://img.youtube.com/vi/RYz5ar17FR0/maxresdefault.jpg" width="20%">](https://youtu.be/RYz5ar17FR0)
 
 ## [Siguiente](https://github.com/daoc/docker-tutorial/tree/master/php02)
