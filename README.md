@@ -1,7 +1,26 @@
 # Docker
-Conceptos introductorios y ejecución de base
 
-### Sitio web, versiones, instalador y arranque de Docker Engine
+## Conceptos introductorios
+
+Docker es una plataforma que facilita integrar el proceso de desarrollar, probar, distribuir y ejecutar aplicaciones. Docker permite un cierto aislamiento con respeto a la arquitectura específica de la infraestructura gracias a la *virtualización ligera* proporcionada por los *contenedores* Docker.
+
+Un contenedor Docker es similar a una máquina virtual pero mucho más *ligero*. Utiliza un servidor central, *motor docker*, que aprovecha al máximo el kernel y librerías del sistema operativo, pero al mismo tiempo mantiene cada contenedor aislado e independiente del resto. Es posible ejecutar Docker en cualquier máquina física o virtual y también ejecutar muchos más contenedores que máquinas virtuales en un mismo equipo.
+
+Usted crea una imagen Docker con todo lo necesario (dependencias, otras aplicaciones, ...) para que su aplicación funcione correctamente. Esta imagen la puede distribuir mediante un registro (público) como Docker Hub. Quien descargue la imagen la puede ejecutar como un contenedor sin necesidad de preocuparse por dependencias adicionales; puede también recibir actualizaciones y ejecutar varias instancias del contenedor en un entorno distribuido, interactuando con otros contenedores en un esquema tipo cliente-servidor.
+
+### Imagen
+
+Una imagen es una plantilla empaquetada con lo necesario para su aplicación. Las imágenes pueden compartirse de manera pública o privada en registros o repositorios de imágenes. La imagen es de solo lectura pero puede servir de base para crear nuevas imágenes que añadan funcionalidad a la anterior en un esquema de capas. Las imágenes permiten crear (varias) instancias de contenedores.
+
+### Contenedor
+
+Es una instancia de una imagen. Los contenedores pueden ejecutarse y ponerse a la disposición de los clientes en una red de contenedores. Los contenedores se ejecutan de manera aislada pero pueden proporcionar facilidades de interconexión como abrir puertos, compartir un sistema de archivos, conectarse con servicios y brindar posibilidades personalizadas de configuración para diferentes instancias.
+
+### Servicio
+
+Permiten distribuir contenedores a través de varios motores Docker, posiblemente corriendo en varios equipos o nodos diferentes (clústeres, nube, ...). Los servicios pueden correr en enjambre (swarm) proporcionando réplicas, recuperación de errores, balanceo de carga, entre otras facilidades de ejecución y administración.
+
+## Sitio web, versiones, instalador y arranque de Docker Engine
 
 Lo primero que necesitamos hacer es descargar la versión adecuada de Docker para nuestro sistema operativo e instalarla.
 
@@ -15,7 +34,7 @@ Para sistemas MacOS también hay las mismas dos alternativas. [Docker Desktop](h
 
 [Demo (sin instalación) sobre Mac, con Docker Desktop<br/><img src="https://img.youtube.com/vi/OoroNAx8bxk/maxresdefault.jpg" width="20%">](https://youtu.be/OoroNAx8bxk)
 
-### Ejecución inicial: información e instrucciones de base, descarga y ejecución de imágenes (docker run)
+## Ejecución inicial: información e instrucciones de base, descarga y ejecución de imágenes (docker run)
 
 [Demo ejecución inicial<br/><img src="https://img.youtube.com/vi/CujFPAYeSQ0/maxresdefault.jpg" width="20%">](https://youtu.be/CujFPAYeSQ0)
 
