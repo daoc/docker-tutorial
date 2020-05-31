@@ -19,7 +19,7 @@ services:
     ports:
       - 8082:8082
     volumes:
-      - ~/git/Docker/docker-tutorial/intermedio01/vol:/home/h2/data
+      - ~/git/Docker/docker-tutorial/srvcs01/vol:/home/h2/data
     deploy:
         replicas: 1
     networks:
@@ -51,7 +51,7 @@ Donde my_web es simplemente el nombre que le estamos dando a todo el stack o gru
 
 Primero, claro, es necesario tener varios computadores o nodos interconectados, sea físicos o virtuales, con Docker instalado.
 
-Primero, escogemos uno de estos nodos, que va a ser el manager, y ejecutamos:
+Luego, escogemos uno de estos nodos, que va a ser el manager, y ejecutamos:
 
 `docker swarm init --advertise-addr <IP>`
 
@@ -59,33 +59,33 @@ donde `<IP>` debe ser la dirección accesible por todos los otros nodos en la re
 
 `docker swarm join --token SWMTKN-1-49nj..rr2e7c <IP>:2377`
 
-Ahora copie este comando y ejecútelo en todos los otros nodos para unirlos al cluster. A partir de esto su swarm está creado y listo para trabajar.
+Ahora copiamos este comando y lo ejecutamos en todos los otros nodos para unirlos al cluster. A partir de esto nuestro swarm está creado y listo para trabajar.
 
 ## Arrancar el servicio
 
-Vaya al manager y active el servicio del ejemplo:
+Vamos al manager y activamos el servicio del ejemplo:
 
 `docker stack deploy -c docker-compose.yml my_web`
 
-esto puede demorar hasta que todas las imágenes se descarguen en todos los nodos. Al terminar la carga vaya a un browser e invoque la dirección de cualquiera de los nodos. Verá aparecer la página del frontend.
+esto puede demorar hasta que todas las imágenes se descarguen en todos los nodos. Al terminar la carga vamos a un browser e invocamos la dirección de cualquiera de los nodos. Veremos aparecer la página del frontend.
 
 ## Algunos elementos sobre el swarm
 
-El swarm tiene un punto de acceso (Ingress) único, de manera que usted puede intentar acceder a cualquiera de los servicios por cualquiera de los nodos y siempre obtendrá respuesta, sin importar en cuales nodos se hayan creado las réplicas.
+El swarm tiene un punto de acceso (Ingress) único, de manera que podemos intentar acceder a cualquiera de los servicios por cualquiera de los nodos y siempre obtendremos respuesta, sin importar en cuales nodos se hayan creado las réplicas.
 
-Para manipular los servicios en el swarm, acceda siempre al nodo manager.
+Para manipular los servicios en el swarm, accedemos siempre al nodo manager.
 
-Si desea visualizar información, el siguiente comando le da información general:
+Si deseamos visualizar información, el siguiente comando nos da información general:
 
 `docker service ls`
 
-Fíjese que los servicios aparecen prejiados con *my_web* que es el nombre del stack.
+Fijémonos en que los servicios aparecen prejiados con *my_web* que es el nombre del stack.
 
-Para ver información más específica de cada servicio use el nombre completo con el comando:
+Para ver información más específica de cada servicio usamos el nombre completo con el comando:
 
 `docker service ps my_web_h2-bdd` por ejemplo.
 
-Para eliminar los servicios use su nombre completo y bórrelos uno por uno:
+Para eliminar los servicios usamos su nombre completo y los borramos uno por uno:
 ```
 docker service rm my_web_frontend
 docker service rm my_web_backend
